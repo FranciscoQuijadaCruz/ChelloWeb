@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://webservices/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservices/">
+
+<xs:element name="CrearTableroUsuario" type="tns:CrearTableroUsuario"/>
+
+<xs:element name="CrearTableroUsuarioResponse" type="tns:CrearTableroUsuarioResponse"/>
+
+<xs:element name="EliminarTableroUsuario" type="tns:EliminarTableroUsuario"/>
+
+<xs:element name="EliminarTableroUsuarioResponse" type="tns:EliminarTableroUsuarioResponse"/>
+
+<xs:element name="EliminarTableroUsuarios" type="tns:EliminarTableroUsuarios"/>
+
+<xs:element name="EliminarTableroUsuariosResponse" type="tns:EliminarTableroUsuariosResponse"/>
+
+<xs:element name="ObtenerTablerosDeUsuario" type="tns:ObtenerTablerosDeUsuario"/>
+
+<xs:element name="ObtenerTablerosDeUsuarioResponse" type="tns:ObtenerTablerosDeUsuarioResponse"/>
+
+<xs:element name="ObtenerUsuariosDeTablero" type="tns:ObtenerUsuariosDeTablero"/>
+
+<xs:element name="ObtenerUsuariosDeTableroResponse" type="tns:ObtenerUsuariosDeTableroResponse"/>
+
+<xs:element name="SeleccionarIdPorTableroYUsuario" type="tns:SeleccionarIdPorTableroYUsuario"/>
+
+<xs:element name="SeleccionarIdPorTableroYUsuarioResponse" type="tns:SeleccionarIdPorTableroYUsuarioResponse"/>
+
+<xs:element name="SeleccionarTableroUsuario" type="tns:SeleccionarTableroUsuario"/>
+
+<xs:element name="SeleccionarTableroUsuarioResponse" type="tns:SeleccionarTableroUsuarioResponse"/>
+
+<xs:complexType name="SeleccionarTableroUsuario">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SeleccionarTableroUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tableroUsuario" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tableroUsuario">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="idTablero" type="xs:int"/>
+<xs:element name="idUsuario" type="xs:int"/>
+<xs:element name="rol" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarTableroUsuarios">
+<xs:sequence>
+<xs:element name="idTablero" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarTableroUsuariosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarTableroUsuario">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarTableroUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SeleccionarIdPorTableroYUsuario">
+<xs:sequence>
+<xs:element name="idTablero" type="xs:int"/>
+<xs:element name="idUsuario" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SeleccionarIdPorTableroYUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CrearTableroUsuario">
+<xs:sequence>
+<xs:element name="idTablero" type="xs:int"/>
+<xs:element name="idUsuario" type="xs:int"/>
+<xs:element name="rol" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CrearTableroUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ObtenerUsuariosDeTablero">
+<xs:sequence>
+<xs:element name="idTablero" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ObtenerUsuariosDeTableroResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:usuario" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="usuario">
+<xs:sequence>
+<xs:element name="contrasena" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ObtenerTablerosDeUsuario">
+<xs:sequence>
+<xs:element name="idUsuario" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ObtenerTablerosDeUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tablero" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tablero">
+<xs:sequence>
+<xs:element name="activo" type="xs:int"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="titulo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://webservices/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservices/">
+
+<xs:element name="AgregarModulo" type="tns:AgregarModulo"/>
+
+<xs:element name="AgregarModuloResponse" type="tns:AgregarModuloResponse"/>
+
+<xs:element name="EditarModulo" type="tns:EditarModulo"/>
+
+<xs:element name="EditarModuloResponse" type="tns:EditarModuloResponse"/>
+
+<xs:element name="EliminarModulo" type="tns:EliminarModulo"/>
+
+<xs:element name="EliminarModuloResponse" type="tns:EliminarModuloResponse"/>
+
+<xs:element name="EliminarModuloVirtual" type="tns:EliminarModuloVirtual"/>
+
+<xs:element name="EliminarModuloVirtualResponse" type="tns:EliminarModuloVirtualResponse"/>
+
+<xs:element name="ObtenerModulosDeTablero" type="tns:ObtenerModulosDeTablero"/>
+
+<xs:element name="ObtenerModulosDeTableroResponse" type="tns:ObtenerModulosDeTableroResponse"/>
+
+<xs:element name="SeleccionarModulo" type="tns:SeleccionarModulo"/>
+
+<xs:element name="SeleccionarModuloResponse" type="tns:SeleccionarModuloResponse"/>
+
+<xs:complexType name="EliminarModulo">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarModuloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarModuloVirtual">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarModuloVirtualResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ObtenerModulosDeTablero">
+<xs:sequence>
+<xs:element name="idTablero" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ObtenerModulosDeTableroResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:modulo" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modulo">
+<xs:sequence>
+<xs:element name="activo" type="xs:int"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="idTablero" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AgregarModulo">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="idTablero" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AgregarModuloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SeleccionarModulo">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SeleccionarModuloResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:modulo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EditarModulo">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EditarModuloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

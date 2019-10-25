@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://jorgenorza.ga:8080/ProyectoFinalWS/UsuarioWS?wsdl" uri="src/conf/xml-resources/web-service-references/UsuarioWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/UsuarioWS.wsdl"/>
+    <system systemId="http://jorgenorza.ga:8080/ProyectoFinalWS/UsuarioWS?xsd=1" uri="src/conf/xml-resources/web-service-references/UsuarioWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/UsuarioWS.xsd_1.xsd"/>
+    <system systemId="http://jorgenorza.ga:8080/ProyectoFinalWS/TableroWS?wsdl" uri="src/conf/xml-resources/web-service-references/TableroWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/TableroWS.wsdl"/>
+    <system systemId="http://jorgenorza.ga:8080/ProyectoFinalWS/TableroWS?xsd=1" uri="src/conf/xml-resources/web-service-references/TableroWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/TableroWS.xsd_1.xsd"/>
+    <system systemId="http://jorgenorza.ga:8080/ProyectoFinalWS/ModificacionWS?wsdl" uri="src/conf/xml-resources/web-service-references/ModificacionWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ModificacionWS.wsdl"/>
+    <system systemId="http://jorgenorza.ga:8080/ProyectoFinalWS/ModificacionWS?xsd=1" uri="src/conf/xml-resources/web-service-references/ModificacionWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ModificacionWS.xsd_1.xsd"/>
+    <system systemId="http://jorgenorza.ga:8080/ProyectoFinalWS/ModuloWS?wsdl" uri="src/conf/xml-resources/web-service-references/ModuloWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ModuloWS.wsdl"/>
+    <system systemId="http://jorgenorza.ga:8080/ProyectoFinalWS/ModuloWS?xsd=1" uri="src/conf/xml-resources/web-service-references/ModuloWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ModuloWS.xsd_1.xsd"/>
+    <system systemId="http://jorgenorza.ga:8080/ProyectoFinalWS/ActividadWS?wsdl" uri="src/conf/xml-resources/web-service-references/ActividadWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ActividadWS.wsdl"/>
+    <system systemId="http://jorgenorza.ga:8080/ProyectoFinalWS/ActividadWS?xsd=1" uri="src/conf/xml-resources/web-service-references/ActividadWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ActividadWS.xsd_1.xsd"/>
+    <system systemId="http://jorgenorza.ga:8080/ProyectoFinalWS/ComentarioWS?wsdl" uri="src/conf/xml-resources/web-service-references/ComentarioWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ComentarioWS.wsdl"/>
+    <system systemId="http://jorgenorza.ga:8080/ProyectoFinalWS/ComentarioWS?xsd=1" uri="src/conf/xml-resources/web-service-references/ComentarioWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ComentarioWS.xsd_1.xsd"/>
+    <system systemId="http://jorgenorza.ga:8080/ProyectoFinalWS/tableroUsuarioWS?WSDL" uri="src/conf/xml-resources/web-service-references/tableroUsuarioWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/tableroUsuarioWS.wsdl"/>
+    <system systemId="http://jorgenorza.ga:8080/ProyectoFinalWS/tableroUsuarioWS?xsd=1" uri="src/conf/xml-resources/web-service-references/tableroUsuarioWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/tableroUsuarioWS.xsd_1.xsd"/>
+</catalog>

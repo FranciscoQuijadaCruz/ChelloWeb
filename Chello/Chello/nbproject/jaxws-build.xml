@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSGEN SECTION
+                ===================
+            -->
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-UsuarioWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/UsuarioWS"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/UsuarioWS" destdir="${build.generated.dir}/jax-wsCache/UsuarioWS" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/UsuarioWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/UsuarioWS.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://jorgenorza.ga:8080/ProyectoFinalWS/UsuarioWS?wsdl" xnocompile="true" xendorsed="true" package="UsuarioWS">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/UsuarioWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/UsuarioWS.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/UsuarioWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/UsuarioWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-UsuarioWS" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/UsuarioWS"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/UsuarioWS"/>
+    </target>
+    <target name="wsimport-client-TableroWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/TableroWS"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/TableroWS" destdir="${build.generated.dir}/jax-wsCache/TableroWS" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/TableroWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/TableroWS.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://jorgenorza.ga:8080/ProyectoFinalWS/TableroWS?wsdl" xnocompile="true" xendorsed="true" package="TableroWS">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/TableroWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/TableroWS.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/TableroWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/TableroWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-TableroWS" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/TableroWS"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/TableroWS"/>
+    </target>
+    <target name="wsimport-client-ModificacionWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ModificacionWS"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ModificacionWS" destdir="${build.generated.dir}/jax-wsCache/ModificacionWS" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ModificacionWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ModificacionWS.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://jorgenorza.ga:8080/ProyectoFinalWS/ModificacionWS?wsdl" xnocompile="true" xendorsed="true" package="ModificacionWS">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ModificacionWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ModificacionWS.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ModificacionWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ModificacionWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ModificacionWS" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ModificacionWS"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ModificacionWS"/>
+    </target>
+    <target name="wsimport-client-ModuloWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ModuloWS"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ModuloWS" destdir="${build.generated.dir}/jax-wsCache/ModuloWS" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ModuloWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ModuloWS.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://jorgenorza.ga:8080/ProyectoFinalWS/ModuloWS?wsdl" xnocompile="true" xendorsed="true" package="ModuloWS">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ModuloWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ModuloWS.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ModuloWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ModuloWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ModuloWS" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ModuloWS"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ModuloWS"/>
+    </target>
+    <target name="wsimport-client-ActividadWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ActividadWS"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ActividadWS" destdir="${build.generated.dir}/jax-wsCache/ActividadWS" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ActividadWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ActividadWS.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://jorgenorza.ga:8080/ProyectoFinalWS/ActividadWS?wsdl" xnocompile="true" xendorsed="true" package="ActividadWS">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ActividadWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ActividadWS.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ActividadWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ActividadWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ActividadWS" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ActividadWS"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ActividadWS"/>
+    </target>
+    <target name="wsimport-client-ComentarioWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ComentarioWS"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ComentarioWS" destdir="${build.generated.dir}/jax-wsCache/ComentarioWS" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ComentarioWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ComentarioWS.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://jorgenorza.ga:8080/ProyectoFinalWS/ComentarioWS?wsdl" xnocompile="true" xendorsed="true" package="ComentarioWS">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ComentarioWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/ComentarioWS.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ComentarioWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ComentarioWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ComentarioWS" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ComentarioWS"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ComentarioWS"/>
+    </target>
+    <target name="wsimport-client-tableroUsuarioWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/tableroUsuarioWS"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/tableroUsuarioWS" destdir="${build.generated.dir}/jax-wsCache/tableroUsuarioWS" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/tableroUsuarioWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/tableroUsuarioWS.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://jorgenorza.ga:8080/ProyectoFinalWS/tableroUsuarioWS?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/tableroUsuarioWS/wsdl/jorgenorza.ga_8080/ProyectoFinalWS/tableroUsuarioWS.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/tableroUsuarioWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/tableroUsuarioWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-tableroUsuarioWS" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/webservices"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/tableroUsuarioWS"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-UsuarioWS, wsimport-client-TableroWS, wsimport-client-ModificacionWS, wsimport-client-ModuloWS, wsimport-client-ActividadWS, wsimport-client-ComentarioWS, wsimport-client-tableroUsuarioWS"/>
+</project>

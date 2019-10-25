@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://webservices/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservices/">
+
+<xs:element name="CrearModificacion" type="tns:CrearModificacion"/>
+
+<xs:element name="CrearModificacionResponse" type="tns:CrearModificacionResponse"/>
+
+<xs:element name="EliminarModificacion" type="tns:EliminarModificacion"/>
+
+<xs:element name="EliminarModificacionResponse" type="tns:EliminarModificacionResponse"/>
+
+<xs:element name="ObtenerModificacionesDeTablero" type="tns:ObtenerModificacionesDeTablero"/>
+
+<xs:element name="ObtenerModificacionesDeTableroResponse" type="tns:ObtenerModificacionesDeTableroResponse"/>
+
+<xs:element name="ObtenerModificacionesDeUsuario" type="tns:ObtenerModificacionesDeUsuario"/>
+
+<xs:element name="ObtenerModificacionesDeUsuarioResponse" type="tns:ObtenerModificacionesDeUsuarioResponse"/>
+
+<xs:element name="SeleccionarModificacion" type="tns:SeleccionarModificacion"/>
+
+<xs:element name="SeleccionarModificacionResponse" type="tns:SeleccionarModificacionResponse"/>
+
+<xs:complexType name="ObtenerModificacionesDeTablero">
+<xs:sequence>
+<xs:element name="idTablero" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ObtenerModificacionesDeTableroResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:modificacion" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificacion">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="idTablero" type="xs:int"/>
+<xs:element name="idUsuario" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SeleccionarModificacion">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SeleccionarModificacionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:modificacion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CrearModificacion">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+<xs:element name="idTablero" type="xs:int"/>
+<xs:element name="idUsuario" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CrearModificacionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarModificacion">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarModificacionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ObtenerModificacionesDeUsuario">
+<xs:sequence>
+<xs:element name="idUsuario" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ObtenerModificacionesDeUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:modificacion" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
